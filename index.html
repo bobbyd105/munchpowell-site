@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Munch Powell — Strategy. Confidence. Growth.</title>
+<title>Munch Powell — Coaching, Consulting, Connecting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -987,16 +987,144 @@
     .speaking-layout { grid-template-columns: 1fr; gap: 48px; }
     .footer-top { flex-direction: column; align-items: flex-start; }
     .footer-links { align-items: flex-start; }
-    .about-stats { grid-template-columns: repeat(3, 1fr); }
-  }
+      }
 
   @media (max-width: 600px) {
     section { padding: 72px 5%; }
-    .about-stats { grid-template-columns: 1fr; }
     .hero-buttons { flex-direction: column; }
     .hero-buttons .btn { text-align: center; justify-content: center; }
     .book-image img { width: 220px; }
   }
+
+ /* =========================
+   MOBILE POLISH PASS
+========================= */
+
+@media (max-width: 768px) {
+
+  /* GLOBAL SECTION SPACING */
+  section {
+    padding: 64px 5%;
+  }
+
+  /* HERO */
+  #hero {
+    padding: 24px 5% 48px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    gap: 32px;
+  }
+
+  .hero-headline {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* HERO IMAGE */
+  .photo-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .photo-frame img {
+    object-position: center 35%;
+  }
+
+  /* PILLARS */
+  .pillars-grid {
+    gap: 20px;
+  }
+
+  .pillar-card {
+    padding: 32px 24px;
+  }
+
+  /* ABOUT */
+  .about-inner {
+    gap: 40px;
+  }
+
+  .about-inner h2 {
+    font-size: 32px;
+  }
+
+  /* PRINCIPLES */
+  .about-principles {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* WORK CARDS */
+  .work-grid {
+    gap: 20px;
+  }
+
+  .work-card-body {
+    padding: 28px 24px;
+  }
+
+  /* BOOK SECTION */
+  .book-inner {
+    gap: 32px;
+  }
+
+  .book-image img {
+    width: 220px;
+  }
+
+  .book-content h2 {
+    font-size: 32px;
+  }
+
+  .book-content p {
+    font-size: 15px;
+  }
+
+  /* SPEAKING */
+  .speaking-layout {
+    gap: 40px;
+  }
+
+  .topic-item {
+    padding: 18px 20px;
+  }
+
+  /* CTA */
+  #cta h2 {
+    font-size: 34px;
+  }
+
+  #cta p {
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    gap: 24px;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+  }
+
+} 
 </style>
 </head>
 <body>
