@@ -2009,6 +2009,11 @@
     const contactError = document.getElementById('contactError');
     const contactSubmit = document.getElementById('contactSubmit');
 
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('contactSuccess').style.display = 'none';
+      document.getElementById('contactSuccess').classList.remove('visible');
+    });
+
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       contactSubmit.classList.add('loading');

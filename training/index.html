@@ -1619,6 +1619,11 @@
     const trainingError = document.getElementById('trainingError');
     const trainingSubmit = document.getElementById('trainingSubmit');
 
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('trainingSuccess').style.display = 'none';
+      document.getElementById('trainingSuccess').classList.remove('visible');
+    });
+
     trainingForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       trainingSubmit.classList.add('loading');
