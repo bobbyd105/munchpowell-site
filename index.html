@@ -1907,15 +1907,6 @@
       <p>Whether you're ready to hire Munch as a speaker, explore a coaching engagement, or discuss a consulting partnership — the first conversation is always the right place to start.</p>
     </div>
 
-    <!-- SUCCESS MESSAGE (hidden until form submits) -->
-    <div class="form-success" id="contactSuccess" style="display:none;">
-      <div class="form-success-icon">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3>Message received.</h3>
-      <p>Munch will be in touch within 1–2 business days.<br>In the meantime, feel free to connect on LinkedIn.</p>
-    </div>
-
     <!-- CONTACT FORM -->
     <form
       class="contact-form"
@@ -2005,14 +1996,8 @@
 
   <script>
     const contactForm = document.getElementById('contactForm');
-    const contactSuccess = document.getElementById('contactSuccess');
     const contactError = document.getElementById('contactError');
     const contactSubmit = document.getElementById('contactSubmit');
-
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('contactSuccess').style.display = 'none';
-      document.getElementById('contactSuccess').classList.remove('visible');
-    });
 
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -2028,7 +2013,8 @@
 
         if (response.ok) {
           contactForm.style.display = 'none';
-          contactSuccess.classList.add('visible');
+          const successHTML = '<div class="form-success visible" id="contactSuccess"><div class="form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Message received.</h3><p>Munch will be in touch within 1–2 business days.<br>In the meantime, feel free to connect on LinkedIn.</p></div>';
+          contactForm.parentNode.insertAdjacentHTML('beforeend', successHTML);
         } else {
           throw new Error('Form submission failed');
         }

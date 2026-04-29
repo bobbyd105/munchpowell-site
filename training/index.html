@@ -1493,15 +1493,6 @@
       <p>All four tracks are available as standalone workshops, multi-session group programs, or embedded coaching engagements. Tell Munch what you're working with and she'll respond with the right fit.</p>
     </div>
 
-    <!-- SUCCESS MESSAGE -->
-    <div class="tform-success" id="trainingSuccess" style="display:none;">
-      <div class="tform-success-icon">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3>Inquiry received.</h3>
-      <p>Munch will review your submission and be in touch within 1–2 business days.</p>
-    </div>
-
     <!-- TRAINING INQUIRY FORM -->
     <form
       class="training-form"
@@ -1615,14 +1606,8 @@
 
   <script>
     const trainingForm = document.getElementById('trainingForm');
-    const trainingSuccess = document.getElementById('trainingSuccess');
     const trainingError = document.getElementById('trainingError');
     const trainingSubmit = document.getElementById('trainingSubmit');
-
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('trainingSuccess').style.display = 'none';
-      document.getElementById('trainingSuccess').classList.remove('visible');
-    });
 
     trainingForm.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -1638,7 +1623,8 @@
 
         if (response.ok) {
           trainingForm.style.display = 'none';
-          trainingSuccess.classList.add('visible');
+          const successHTML = '<div class="tform-success visible" id="trainingSuccess"><div class="tform-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Inquiry received.</h3><p>Munch will review your submission and be in touch within 1–2 business days.</p></div>';
+          trainingForm.parentNode.insertAdjacentHTML('beforeend', successHTML);
         } else {
           throw new Error('Submission failed');
         }
