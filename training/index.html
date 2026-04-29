@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon"href="/assets/images/favicon.png">
+<link rel="canonical" href="https://munchpowell.co/training">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signature Training Tracks — Munch Powell</title>
+<meta name="description" content="Four structured training tracks for sales professionals and leaders — The Closer's Map, The Leader's Map, You Are the Brand, and The Growth Map.">
+
+<meta property="og:title" content="Signature Training Tracks — Munch Powell">
+<meta property="og:description" content="Sales and leadership training programs built for professionals who are ready to create lasting, measurable results.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://munchpowell.co/training">
+<meta property="og:image" content="https://munchpowell.co/assets/images/hero.png">
+
+<meta name="theme-color" content="#FAF8F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F3;
+    --beige: #F2EDE4;
+    --beige-dark: #E8E0D2;
+    --slate-blue: #6B7F99;
+    --slate-blue-dark: #536175;
+    --slate-blue-light: #8A9BB5;
+    --charcoal: #2C2C2A;
+    --charcoal-soft: #4A4844;
+    --muted: #8A8780;
+    --gold: #B89A6A;
+    --white: #FFFFFF;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --radius: 50px;
+    --radius-card: 16px;
+    --transition: 0.25s ease;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 248, 243, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,154,106,0.15);
+    padding: 0 5%;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .logo-mark {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--slate-blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo-mark span {
+    font-size: 13px;
+    font-family: var(--sans);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .logo-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--beige-dark);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  nav a {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  nav a.active,
+  nav a:hover { color: var(--slate-blue); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: var(--radius);
+    transition: all var(--transition);
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--slate-blue);
+    color: var(--white);
+  }
+
+  .btn-primary:hover {
+    background: var(--slate-blue-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--charcoal);
+    border: 1.5px solid rgba(44,44,42,0.25);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--slate-blue);
+    color: var(--slate-blue);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--slate-blue);
+    border: 1.5px solid var(--slate-blue-light);
+    padding: 14px 36px;
+    font-size: 14px;
+  }
+
+  .btn-ghost:hover {
+    background: var(--slate-blue);
+    color: var(--white);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost-light {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    padding: 14px 36px;
+    font-size: 14px;
+  }
+
+  .btn-ghost-light:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--charcoal);
+    transform: translateY(-1px);
+  }
+
+  .btn-large { padding: 16px 44px; font-size: 14px; }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-toggle svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--charcoal);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--charcoal);
+    padding: 100px 5% 80px;
+  }
+
+  .page-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .page-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.8;
+  }
+
+  .page-hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(44px, 5.5vw, 72px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .page-hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .page-hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  .track-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .track-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    text-decoration: none;
+    transition: background var(--transition), border-color var(--transition);
+  }
+
+  .track-nav-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(184,154,106,0.3);
+  }
+
+  .track-nav-num {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.15);
+    min-width: 28px;
+  }
+
+  .track-nav-title {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    transition: color var(--transition);
+  }
+
+  .track-nav-item:hover .track-nav-title {
+    color: var(--gold);
+  }
+
+  .track-nav-arrow {
+    margin-left: auto;
+    color: rgba(255,255,255,0.2);
+    font-size: 14px;
+    transition: color var(--transition);
+  }
+
+  .track-nav-item:hover .track-nav-arrow {
+    color: var(--gold);
+  }
+
+  /* TRACK SECTION */
+  .track-section {
+    padding: 100px 5%;
+    scroll-margin-top: 80px;
+  }
+
+  .track-section:nth-child(even) {
+    background: var(--beige);
+  }
+
+  .track-section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* TRACK HEADER */
+  .track-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+    margin-bottom: 64px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--beige-dark);
+  }
+
+  .track-section:nth-child(even) .track-header {
+    border-bottom-color: #D8D0C2;
+  }
+
+  .track-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .track-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .track-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .track-tagline {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--charcoal-soft);
+    font-style: italic;
+    border-left: 2px solid var(--gold);
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+
+  .track-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--beige-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .track-section:nth-child(even) .track-meta {
+    border-color: #D8D0C2;
+  }
+
+  .track-meta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--beige-dark);
+  }
+
+  .track-section:nth-child(even) .track-meta-item {
+    border-bottom-color: #D8D0C2;
+  }
+
+  .track-meta-item:last-child { border-bottom: none; }
+
+  .track-meta-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .track-meta-value {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--charcoal-soft);
+  }
+
+  /* SECTION LABEL */
+  .content-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .content-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--beige-dark);
+  }
+
+  .track-section:nth-child(even) .content-label::after {
+    background: #D8D0C2;
+  }
+
+  /* CONTENT GRID */
+  .track-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .content-block h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  /* OUTCOME LIST */
+  .outcome-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .outcome-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--charcoal-soft);
+  }
+
+  .outcome-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    min-width: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 7px;
+    opacity: 0.7;
+  }
+
+  /* AUDIENCE BLOCK */
+  .audience-block {
+    background: var(--cream);
+    border-radius: var(--radius-card);
+    padding: 32px 28px;
+    border: 1px solid rgba(184,154,106,0.15);
+  }
+
+  .track-section:nth-child(even) .audience-block {
+    background: var(--white);
+  }
+
+  .audience-block p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+  }
+
+  .audience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    padding: 6px 14px;
+    border: 1.5px solid rgba(44,44,42,0.18);
+    color: var(--charcoal-soft);
+    border-radius: 40px;
+  }
+
+  /* OBJECTIVES GRID */
+  .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .obj-card {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid rgba(184,154,106,0.12);
+    border-top: 2px solid var(--gold);
+  }
+
+  .track-section:nth-child(even) .obj-card {
+    background: var(--white);
+  }
+
+  .obj-num {
+    font-family: var(--serif);
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--beige-dark);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .obj-card p {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+
+  /* PULL QUOTE */
+  .track-pull-quote {
+    background: var(--charcoal);
+    border-radius: var(--radius-card);
+    padding: 48px 52px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .track-pull-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 160px;
+    color: var(--gold);
+    position: absolute;
+    top: -20px;
+    left: 28px;
+    line-height: 1;
+    opacity: 0.12;
+  }
+
+  .track-pull-quote p {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.75);
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+  }
+
+  /* TRACK CTA STRIP */
+  .track-cta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 40px;
+    background: var(--beige-dark);
+    border-radius: var(--radius-card);
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .track-section:nth-child(even) .track-cta-strip {
+    background: var(--beige-dark);
+  }
+
+  .track-cta-strip p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--charcoal-soft);
+  }
+
+  /* FINAL CTA */
+  #training-cta {
+    background: var(--charcoal);
+    padding: 120px 5%;
+    text-align: center;
+  }
+
+  #training-cta .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(184,154,106,0.8);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  #training-cta h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  #training-cta h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  #training-cta p {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 40px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--charcoal);
+    padding: 72px 5% 40px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-brand .footer-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-links a svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-nav { display: flex; gap: 28px; }
+
+  .footer-nav a {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .footer-nav a:hover { color: rgba(255,255,255,0.5); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { display: none; }
+    nav.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      padding: 24px 5% 32px;
+      border-bottom: 1px solid var(--beige-dark);
+      gap: 24px;
+      align-items: flex-start;
+    }
+    nav.open .btn { width: 100%; justify-content: center; }
+    .nav-toggle { display: block; }
+    header { position: relative; }
+    .page-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .track-header { grid-template-columns: 1fr; gap: 36px; }
+    .track-content { grid-template-columns: 1fr; gap: 36px; }
+    .objectives-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { flex-direction: column; align-items: flex-start; }
+    .footer-links { align-items: flex-start; }
+  }
+
+  @media (max-width: 600px) {
+    .track-section { padding: 64px 5%; }
+    .objectives-grid { grid-template-columns: 1fr; }
+    .track-cta-strip { flex-direction: column; text-align: center; }
+    .track-pull-quote { padding: 36px 28px; }
+    .track-pull-quote p { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="/" class="logo-mark">
+      M&thinsp;|&thinsp;P
+      <div class="logo-divider"></div>
+      <span>Munch Powell</span>
+    </a>
+    <nav id="nav">
+      <a href="/#about">About</a>
+      <a href="/#work">Work</a>
+      <a href="/training" class="active">Training</a>
+      <a href="/#book">Book</a>
+      <a href="/#speaking">Speaking</a>
+      <a href="/#cta">Contact</a>
+      <a href="/#cta" class="btn btn-primary">Work With Munch</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-hero-eyebrow">Signature Training Tracks</div>
+      <h1>Programs Built to<br><em>Change How You Work</em></h1>
+      <p class="page-hero-sub">Four structured training tracks for sales professionals and leaders who are done leaving results on the table — and ready to build the skills and systems that create lasting change.</p>
+      <a href="/#cta" class="btn btn-ghost-light btn-large">Inquire About Training</a>
+    </div>
+    <div>
+      <div class="track-nav">
+        <a class="track-nav-item" href="#closer">
+          <span class="track-nav-num">01</span>
+          <span class="track-nav-title">The Closer's Map</span>
+          <span class="track-nav-arrow">↓</span>
+        </a>
+        <a class="track-nav-item" href="#leader">
+          <span class="track-nav-num">02</span>
+          <span class="track-nav-title">The Leader's Map</span>
+          <span class="track-nav-arrow">↓</span>
+        </a>
+        <a class="track-nav-item" href="#brand">
+          <span class="track-nav-num">03</span>
+          <span class="track-nav-title">You Are the Brand</span>
+          <span class="track-nav-arrow">↓</span>
+        </a>
+        <a class="track-nav-item" href="#growth">
+          <span class="track-nav-num">04</span>
+          <span class="track-nav-title">The Growth Map</span>
+          <span class="track-nav-arrow">↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- TRACK 01: THE CLOSER'S MAP -->
+<!-- ══════════════════════════════════════ -->
+<section class="track-section" id="closer">
+  <div class="track-section-inner">
+
+    <div class="track-header">
+      <div>
+        <div class="track-eyebrow">Track 01 — Sales Mastery</div>
+        <h2>The Closer's Map</h2>
+        <p class="track-tagline">Commission Sales Mastery for Closing Warm Leads and Converting Cold Prospects — A Framework for Stronger Follow-Up, Sharper Strategy, and Better Conversion</p>
+      </div>
+      <div>
+        <div class="track-meta">
+          <div class="track-meta-item">
+            <span class="track-meta-label">Track Type</span>
+            <span class="track-meta-value">Sales Mastery</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Delivery</span>
+            <span class="track-meta-value">Workshop · Group · 1:1 Coaching</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Experience Level</span>
+            <span class="track-meta-value">All Levels</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Focus Area</span>
+            <span class="track-meta-value">Revenue Conversion</span>
+          </div>
+        </div>
+        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+      </div>
+    </div>
+
+    <div class="track-pull-quote">
+      <p>Most salespeople don't lose deals because they lack information. They lose them because they lack a repeatable system for building momentum and earning the close.</p>
+    </div>
+
+    <div class="track-content">
+      <div class="content-block">
+        <div class="content-label">Key Outcomes</div>
+        <h3>What Participants Walk Away With</h3>
+        <ul class="outcome-list">
+          <li>A proven system for converting both warm leads and cold prospects with confidence</li>
+          <li>Greater control over conversations from first contact through signed deal</li>
+          <li>A disciplined follow-up strategy that eliminates missed opportunities</li>
+          <li>The ability to identify, understand, and overcome resistance before it stalls a close</li>
+          <li>Consistent revenue output rooted in repeatable, coachable behavior</li>
+          <li>Stronger pipeline management and deal-stage clarity</li>
+          <li>A sharper sense of timing, tone, and approach for every stage of the sales process</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <div class="content-label">Target Audience</div>
+        <h3>Who This Track Is Built For</h3>
+        <div class="audience-block">
+          <p>This track is designed for commission-based sales professionals who are actively working leads but not closing at the rate they want — and for organizations looking to raise the floor of their entire sales team's performance.</p>
+          <div class="audience-tags">
+            <span class="tag">Commission Sales Reps</span>
+            <span class="tag">Inside Sales</span>
+            <span class="tag">Field Sales Pros</span>
+            <span class="tag">New-to-Sales Hires</span>
+            <span class="tag">Sales Veterans Retraining</span>
+            <span class="tag">Business Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-label">Learning Objectives</div>
+    <div class="objectives-grid" style="margin-bottom:40px;">
+      <div class="obj-card"><div class="obj-num">01</div><p>Map the full sales conversation from initial contact to contract and know exactly where and why deals fall apart</p></div>
+      <div class="obj-card"><div class="obj-num">02</div><p>Build momentum through structured discovery, active listening, and value-aligned communication</p></div>
+      <div class="obj-card"><div class="obj-num">03</div><p>Develop a follow-up cadence that keeps deals alive without feeling pushy or desperate</p></div>
+      <div class="obj-card"><div class="obj-num">04</div><p>Recognize buying signals and objections early and respond with clarity instead of reactivity</p></div>
+      <div class="obj-card"><div class="obj-num">05</div><p>Apply proven closing frameworks that feel natural, confident, and appropriate to each buyer</p></div>
+      <div class="obj-card"><div class="obj-num">06</div><p>Track personal performance metrics and use data to self-correct and improve conversion over time</p></div>
+    </div>
+
+    <div class="track-cta-strip">
+      <p>Ready to build a closing system that actually holds up under pressure?</p>
+      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- TRACK 02: THE LEADER'S MAP -->
+<!-- ══════════════════════════════════════ -->
+<section class="track-section" id="leader">
+  <div class="track-section-inner">
+
+    <div class="track-header">
+      <div>
+        <div class="track-eyebrow">Track 02 — Sales Leadership</div>
+        <h2>The Leader's Map</h2>
+        <p class="track-tagline">Leading High-Performing Sales Teams with Clarity and Accountability — A Framework for Leading with Trust, Direction, and Measurable Impact</p>
+      </div>
+      <div>
+        <div class="track-meta">
+          <div class="track-meta-item">
+            <span class="track-meta-label">Track Type</span>
+            <span class="track-meta-value">Sales Leadership</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Delivery</span>
+            <span class="track-meta-value">Workshop · Group · 1:1 Coaching</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Experience Level</span>
+            <span class="track-meta-value">Managers &amp; Above</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Focus Area</span>
+            <span class="track-meta-value">Team Performance</span>
+          </div>
+        </div>
+        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+      </div>
+    </div>
+
+    <div class="track-pull-quote">
+      <p>The difference between a manager and a leader is whether the team performs because they're watched — or because they believe in what they're building.</p>
+    </div>
+
+    <div class="track-content">
+      <div class="content-block">
+        <div class="content-label">Key Outcomes</div>
+        <h3>What Participants Walk Away With</h3>
+        <ul class="outcome-list">
+          <li>A leadership framework for building teams that perform with ownership rather than oversight</li>
+          <li>Clearer communication systems that reduce confusion and misalignment across the team</li>
+          <li>Practical coaching tools to develop underperformers and retain top talent</li>
+          <li>Defined accountability structures that hold the team — and the leader — to a consistent standard</li>
+          <li>A stronger team culture built on trust, direction, and shared performance expectations</li>
+          <li>The ability to measure team health not just by numbers, but by behavior and consistency</li>
+          <li>Greater confidence as a leader who drives results without burning people out</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <div class="content-label">Target Audience</div>
+        <h3>Who This Track Is Built For</h3>
+        <div class="audience-block">
+          <p>This track is built for sales managers, directors, and team leads who are responsible for producing results through others — particularly those navigating the shift from top individual performer to trusted, effective leader.</p>
+          <div class="audience-tags">
+            <span class="tag">Sales Managers</span>
+            <span class="tag">Team Leads</span>
+            <span class="tag">Sales Directors</span>
+            <span class="tag">New Managers</span>
+            <span class="tag">VP of Sales</span>
+            <span class="tag">Regional Leaders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-label">Learning Objectives</div>
+    <div class="objectives-grid" style="margin-bottom:40px;">
+      <div class="obj-card"><div class="obj-num">01</div><p>Define and communicate clear performance standards so every team member knows what good looks like</p></div>
+      <div class="obj-card"><div class="obj-num">02</div><p>Build a coaching cadence that develops skill, builds confidence, and creates consistent output</p></div>
+      <div class="obj-card"><div class="obj-num">03</div><p>Identify performance gaps early and respond with direction rather than discipline or avoidance</p></div>
+      <div class="obj-card"><div class="obj-num">04</div><p>Establish accountability systems that the team respects — and that the leader actually enforces</p></div>
+      <div class="obj-card"><div class="obj-num">05</div><p>Develop a leadership voice that earns trust without sacrificing clarity or high standards</p></div>
+      <div class="obj-card"><div class="obj-num">06</div><p>Use team data and individual coaching conversations to drive both cultural and revenue outcomes</p></div>
+    </div>
+
+    <div class="track-cta-strip">
+      <p>Ready to lead a team that performs because they want to — not because they have to?</p>
+      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- TRACK 03: YOU ARE THE BRAND -->
+<!-- ══════════════════════════════════════ -->
+<section class="track-section" id="brand">
+  <div class="track-section-inner">
+
+    <div class="track-header">
+      <div>
+        <div class="track-eyebrow">Track 03 — Personal Brand</div>
+        <h2>You Are the Brand</h2>
+        <p class="track-tagline">Emotional Branding, Trust, and Authentic Presence in Sales — A Framework for Building Trust Through Presence, Connection, and Consistency</p>
+      </div>
+      <div>
+        <div class="track-meta">
+          <div class="track-meta-item">
+            <span class="track-meta-label">Track Type</span>
+            <span class="track-meta-value">Personal Brand</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Delivery</span>
+            <span class="track-meta-value">Workshop · Group · 1:1 Coaching</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Experience Level</span>
+            <span class="track-meta-value">All Levels</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Focus Area</span>
+            <span class="track-meta-value">Influence &amp; Credibility</span>
+          </div>
+        </div>
+        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+      </div>
+    </div>
+
+    <div class="track-pull-quote">
+      <p>People don't buy your product first. They buy you — your presence, your consistency, and how you make them feel when they're in the room with you.</p>
+    </div>
+
+    <div class="track-content">
+      <div class="content-block">
+        <div class="content-label">Key Outcomes</div>
+        <h3>What Participants Walk Away With</h3>
+        <ul class="outcome-list">
+          <li>A clearly defined personal brand that reflects who they are and what they stand for professionally</li>
+          <li>Greater confidence in how they show up across in-person and digital environments</li>
+          <li>A communication style that builds trust faster and leaves a lasting impression</li>
+          <li>The ability to use authenticity as a strategic advantage — not just a personal value</li>
+          <li>Stronger client and prospect relationships built on credibility and emotional resonance</li>
+          <li>A consistent presence that differentiates them in a crowded, competitive market</li>
+          <li>Tools to audit and evolve their brand as they grow in their career</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <div class="content-label">Target Audience</div>
+        <h3>Who This Track Is Built For</h3>
+        <div class="audience-block">
+          <p>This track is designed for sales professionals, leaders, and entrepreneurs who understand that who they are is as important as what they sell — and who want to close the gap between how they see themselves and how others experience them.</p>
+          <div class="audience-tags">
+            <span class="tag">Sales Professionals</span>
+            <span class="tag">Sales Leaders</span>
+            <span class="tag">Entrepreneurs</span>
+            <span class="tag">Client-Facing Teams</span>
+            <span class="tag">Career Transitioners</span>
+            <span class="tag">High-Potential Talent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-label">Learning Objectives</div>
+    <div class="objectives-grid" style="margin-bottom:40px;">
+      <div class="obj-card"><div class="obj-num">01</div><p>Identify and articulate their core personal brand — the intersection of their strengths, values, and professional reputation</p></div>
+      <div class="obj-card"><div class="obj-num">02</div><p>Understand the emotional drivers behind trust-building and use them intentionally in client interactions</p></div>
+      <div class="obj-card"><div class="obj-num">03</div><p>Develop a communication style — verbal and non-verbal — that projects confidence, warmth, and competence</p></div>
+      <div class="obj-card"><div class="obj-num">04</div><p>Align how they present themselves online with how they show up in person, creating a seamless brand experience</p></div>
+      <div class="obj-card"><div class="obj-num">05</div><p>Turn their story into a differentiator — using authenticity to connect rather than perform</p></div>
+      <div class="obj-card"><div class="obj-num">06</div><p>Build habits and practices that maintain brand consistency under pressure and over time</p></div>
+    </div>
+
+    <div class="track-cta-strip">
+      <p>Ready to own who you are and turn it into your most powerful competitive advantage?</p>
+      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- TRACK 04: THE GROWTH MAP -->
+<!-- ══════════════════════════════════════ -->
+<section class="track-section" id="growth">
+  <div class="track-section-inner">
+
+    <div class="track-header">
+      <div>
+        <div class="track-eyebrow">Track 04 — Strategic Growth</div>
+        <h2>The Growth Map</h2>
+        <p class="track-tagline">Strategic Selling, Client Growth, and Long-Term Relationship Building — A Framework for Growing Business Through Strategy, Service, and Follow-Through</p>
+      </div>
+      <div>
+        <div class="track-meta">
+          <div class="track-meta-item">
+            <span class="track-meta-label">Track Type</span>
+            <span class="track-meta-value">Strategic Growth</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Delivery</span>
+            <span class="track-meta-value">Workshop · Group · 1:1 Coaching</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Experience Level</span>
+            <span class="track-meta-value">Mid–Senior Level</span>
+          </div>
+          <div class="track-meta-item">
+            <span class="track-meta-label">Focus Area</span>
+            <span class="track-meta-value">Retention &amp; Expansion</span>
+          </div>
+        </div>
+        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+      </div>
+    </div>
+
+    <div class="track-pull-quote">
+      <p>The close isn't the finish line. It's the starting line. The professionals who understand that are the ones who build careers — not just commission checks.</p>
+    </div>
+
+    <div class="track-content">
+      <div class="content-block">
+        <div class="content-label">Key Outcomes</div>
+        <h3>What Participants Walk Away With</h3>
+        <ul class="outcome-list">
+          <li>A strategic framework for expanding existing accounts and deepening client relationships over time</li>
+          <li>A clearer understanding of how to move from transactional selling to true partnership</li>
+          <li>Stronger client retention habits built on proactive service and consistent follow-through</li>
+          <li>The ability to identify growth opportunities within current accounts before the client even asks</li>
+          <li>A long-term relationship strategy that generates referrals, renewals, and expanded revenue</li>
+          <li>Confidence in having value-based conversations that go beyond the initial sale</li>
+          <li>A personal playbook for becoming the trusted advisor clients call first</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <div class="content-label">Target Audience</div>
+        <h3>Who This Track Is Built For</h3>
+        <div class="audience-block">
+          <p>This track is built for experienced sales professionals and account managers who have already proven they can close — and are ready to build the kind of client relationships that sustain long-term revenue growth without constant prospecting.</p>
+          <div class="audience-tags">
+            <span class="tag">Account Managers</span>
+            <span class="tag">Senior Sales Reps</span>
+            <span class="tag">Client Success Teams</span>
+            <span class="tag">Strategic Account Leads</span>
+            <span class="tag">Business Development</span>
+            <span class="tag">Relationship Managers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-label">Learning Objectives</div>
+    <div class="objectives-grid" style="margin-bottom:40px;">
+      <div class="obj-card"><div class="obj-num">01</div><p>Conduct strategic account reviews that surface expansion opportunities and identify at-risk relationships</p></div>
+      <div class="obj-card"><div class="obj-num">02</div><p>Develop a proactive communication rhythm that keeps clients engaged and valued between transactions</p></div>
+      <div class="obj-card"><div class="obj-num">03</div><p>Position themselves as a strategic partner — not just a vendor — through insight-led conversations</p></div>
+      <div class="obj-card"><div class="obj-num">04</div><p>Build referral systems and renewal strategies that create predictable revenue from existing relationships</p></div>
+      <div class="obj-card"><div class="obj-num">05</div><p>Navigate client dissatisfaction and service gaps in a way that strengthens rather than damages trust</p></div>
+      <div class="obj-card"><div class="obj-num">06</div><p>Set long-term growth goals at the account level and build plans to achieve them with discipline and follow-through</p></div>
+    </div>
+
+    <div class="track-cta-strip">
+      <p>Ready to stop starting over and start building something that compounds?</p>
+      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="training-cta">
+  <span class="section-label">Get Started</span>
+  <h2>Let's Find the Right<br><em>Track for Your Team</em></h2>
+  <p>All four tracks are available as standalone workshops, multi-session group programs, or embedded coaching engagements. Every program is built around your goals, your people, and the results that matter.</p>
+  <a href="/#cta" class="btn btn-ghost-light btn-large">Start the Conversation</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-name">Munch Powell</div>
+        <div class="footer-tagline">Consulting · Coaching · Connecting</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@munchpowell.co">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          hello@munchpowell.co
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Munch Powell. All rights reserved.</div>
+      <div class="footer-nav">
+        <a href="/#about">About</a>
+        <a href="/#work">Work</a>
+        <a href="/training">Training</a>
+        <a href="/#book">Book</a>
+        <a href="/#speaking">Speaking</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('open'));
+  });
+
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 20 ? '0 2px 32px rgba(44,44,42,0.06)' : 'none';
+  });
+</script>
+</body>
+</html>

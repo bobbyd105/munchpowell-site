@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/images/favicon.png">
+<link rel="icon"href="/assets/images/favicon.png">
 <link rel="canonical" href="https://munchpowell.co">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 <meta property="og:description" content="Helping professionals communicate clearly, build stronger relationships, and grow with intention.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://munchpowell.co">
-<meta property="og:image" content="https://munchpowell.co/images/hero.png">
+<meta property="og:image" content="https://munchpowell.co/assets/images/hero.png">
 
 <!-- Mobile theme color -->
 <meta name="theme-color" content="#FAF8F3">
@@ -1012,6 +1012,189 @@
     .book-image img { width: 220px; }
   }
 
+  /* =========================
+   TRAINING TRACKS SECTION
+========================= */
+
+  #training {
+    background: var(--charcoal);
+    padding: 120px 5%;
+  }
+
+  .training-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .training-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 72px;
+  }
+
+  .training-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.15;
+  }
+
+  .training-header h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .training-header-right p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+  }
+
+  .training-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .track-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-card);
+    padding: 40px 36px;
+    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+  }
+
+  .track-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  .track-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(184,154,106,0.3);
+    transform: translateY(-3px);
+  }
+
+  .track-card:hover::before {
+    opacity: 1;
+  }
+
+  .track-card-num {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .track-card-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    opacity: 0.8;
+  }
+
+  .track-card h3 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .track-card p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 24px;
+  }
+
+  .track-card-outcomes {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 28px;
+  }
+
+  .track-outcome {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+
+  .track-outcome::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    min-width: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.6;
+    margin-top: 6px;
+  }
+
+  .track-link {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--slate-blue-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap var(--transition), color var(--transition);
+  }
+
+  .track-card:hover .track-link {
+    gap: 12px;
+    color: var(--gold);
+  }
+
+  .training-cta-bar {
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .training-cta-bar p {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .training-header { grid-template-columns: 1fr; gap: 28px; }
+    .training-grid { grid-template-columns: 1fr; }
+  }
+
  /* =========================
    MOBILE POLISH PASS
 ========================= */
@@ -1155,6 +1338,7 @@
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#work">Work</a>
+      <a href="/training">Training</a>
       <a href="#book">Book</a>
       <a href="#speaking">Speaking</a>
       <a href="#cta">Contact</a>
@@ -1183,7 +1367,7 @@
       <div class="geo-dot geo-dot-1"></div>
       <div class="geo-dot geo-dot-2"></div>
       <div class="photo-frame">
-        <img src="images/hero.png" alt="Munch Powell">
+        <img src="/assets/images/hero.png" alt="Munch Powell">
       </div>
     </div>
   </div>
@@ -1304,10 +1488,86 @@
   </div>
 </section>
 
+<section id="training">
+  <div class="training-inner">
+    <div class="training-header">
+      <div>
+        <span class="section-label" style="color: rgba(184,154,106,0.8);">Signature Training Tracks</span>
+        <h2>Programs Built to<br><em>Change How You Work</em></h2>
+      </div>
+      <div class="training-header-right">
+        <p>Four structured training tracks designed for sales professionals and leaders who are ready to move beyond good intentions and build the skills, habits, and frameworks that create lasting results.</p>
+        <a href="/training" class="btn btn-ghost">View All Tracks →</a>
+      </div>
+    </div>
+
+    <div class="training-grid">
+
+      <a class="track-card" href="/training#closer">
+        <div class="track-card-num">01</div>
+        <div class="track-card-label">Sales Track</div>
+        <h3>The Closer's Map</h3>
+        <p>Commission Sales Mastery for closing warm leads, converting cold prospects, and turning conversations into consistent revenue.</p>
+        <div class="track-card-outcomes">
+          <div class="track-outcome">A proven system for warm and cold conversion</div>
+          <div class="track-outcome">Stronger follow-up and pipeline discipline</div>
+          <div class="track-outcome">Frameworks for overcoming resistance and closing</div>
+        </div>
+        <div class="track-link">Explore This Track <span>→</span></div>
+      </a>
+
+      <a class="track-card" href="/training#leader">
+        <div class="track-card-num">02</div>
+        <div class="track-card-label">Leadership Track</div>
+        <h3>The Leader's Map</h3>
+        <p>Leading high-performing sales teams with clarity and accountability — coaching people to perform with ownership, not oversight.</p>
+        <div class="track-card-outcomes">
+          <div class="track-outcome">Build teams that perform without micromanagement</div>
+          <div class="track-outcome">Clear accountability and communication systems</div>
+          <div class="track-outcome">A coaching cadence that develops real skill</div>
+        </div>
+        <div class="track-link">Explore This Track <span>→</span></div>
+      </a>
+
+      <a class="track-card" href="/training#brand">
+        <div class="track-card-num">03</div>
+        <div class="track-card-label">Personal Brand Track</div>
+        <h3>You Are the Brand</h3>
+        <p>Emotional branding, trust, and authentic presence in sales — turning who you are into a competitive advantage.</p>
+        <div class="track-card-outcomes">
+          <div class="track-outcome">Define and own your personal brand</div>
+          <div class="track-outcome">Build credibility and lasting connection</div>
+          <div class="track-outcome">Show up consistently across every environment</div>
+        </div>
+        <div class="track-link">Explore This Track <span>→</span></div>
+      </a>
+
+      <a class="track-card" href="/training#growth">
+        <div class="track-card-num">04</div>
+        <div class="track-card-label">Growth Track</div>
+        <h3>The Growth Map</h3>
+        <p>Strategic selling, client growth, and long-term relationship building — moving beyond the close to build partnerships that generate lasting revenue.</p>
+        <div class="track-card-outcomes">
+          <div class="track-outcome">Expand accounts and deepen client trust</div>
+          <div class="track-outcome">Strengthen retention and long-term value</div>
+          <div class="track-outcome">Become the advisor clients call first</div>
+        </div>
+        <div class="track-link">Explore This Track <span>→</span></div>
+      </a>
+
+    </div>
+
+    <div class="training-cta-bar">
+      <p>All tracks available as workshops, group programs, or embedded coaching engagements.</p>
+      <a href="/training" class="btn btn-primary btn-large">See Full Track Details</a>
+    </div>
+  </div>
+</section>
+
 <section id="book">
   <div class="book-inner">
     <div class="book-image">
-      <img src="images/authentic_edge.png" alt="The Authentic Edge by Munch Powell">
+      <img src="/assets/images/authentic_edge.png" alt="The Authentic Edge by Munch Powell">
     </div>
     <div class="book-content">
       <span class="section-label">The Book</span>
@@ -1421,6 +1681,7 @@
       <div class="footer-nav">
         <a href="#about">About</a>
         <a href="#work">Work</a>
+        <a href="/training">Training</a>
         <a href="#book">Book</a>
         <a href="#speaking">Speaking</a>
       </div>
