@@ -830,7 +830,7 @@
       <div class="page-hero-eyebrow">Signature Training Tracks</div>
       <h1>Programs Built to<br><em>Change How You Work</em></h1>
       <p class="page-hero-sub">Four structured training tracks for sales professionals and leaders who are done leaving results on the table — and ready to build the skills and systems that create lasting change.</p>
-      <a href="/#cta" class="btn btn-ghost-light btn-large">Inquire About Training</a>
+      <a href="#training-cta" class="btn btn-ghost-light btn-large">Inquire About Training</a>
     </div>
     <div>
       <div class="track-nav">
@@ -890,7 +890,7 @@
             <span class="track-meta-value">Revenue Conversion</span>
           </div>
         </div>
-        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+        <a href="#training-cta?track=closer" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
       </div>
     </div>
 
@@ -941,7 +941,7 @@
 
     <div class="track-cta-strip">
       <p>Ready to build a closing system that actually holds up under pressure?</p>
-      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+      <a href="#training-cta?track=closer" class="btn btn-primary">Inquire About This Track</a>
     </div>
 
   </div>
@@ -978,7 +978,7 @@
             <span class="track-meta-value">Team Performance</span>
           </div>
         </div>
-        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+        <a href="#training-cta?track=leader" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
       </div>
     </div>
 
@@ -1029,7 +1029,7 @@
 
     <div class="track-cta-strip">
       <p>Ready to lead a team that performs because they want to — not because they have to?</p>
-      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+      <a href="#training-cta?track=leader" class="btn btn-primary">Inquire About This Track</a>
     </div>
 
   </div>
@@ -1066,7 +1066,7 @@
             <span class="track-meta-value">Influence &amp; Credibility</span>
           </div>
         </div>
-        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+        <a href="#training-cta?track=brand" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
       </div>
     </div>
 
@@ -1117,7 +1117,7 @@
 
     <div class="track-cta-strip">
       <p>Ready to own who you are and turn it into your most powerful competitive advantage?</p>
-      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+      <a href="#training-cta?track=brand" class="btn btn-primary">Inquire About This Track</a>
     </div>
 
   </div>
@@ -1154,7 +1154,7 @@
             <span class="track-meta-value">Retention &amp; Expansion</span>
           </div>
         </div>
-        <a href="/#cta" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
+        <a href="#training-cta?track=growth" class="btn btn-primary" style="width:100%; justify-content:center;">Inquire About This Track</a>
       </div>
     </div>
 
@@ -1205,7 +1205,7 @@
 
     <div class="track-cta-strip">
       <p>Ready to stop starting over and start building something that compounds?</p>
-      <a href="/#cta" class="btn btn-primary">Inquire About This Track</a>
+      <a href="#training-cta?track=growth" class="btn btn-primary">Inquire About This Track</a>
     </div>
 
   </div>
@@ -1669,6 +1669,26 @@
     </div>
   </div>
 </footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const track = params.get('track');
+const trackMap = {
+  'closer': "The Closer's Map",
+  'leader': "The Leader's Map",
+  'brand': 'You Are the Brand',
+  'growth': 'The Growth Map'
+};
+if (track && trackMap[track]) {
+  window.addEventListener('DOMContentLoaded', function() {
+    const select = document.getElementById('t-track');
+    if (select) {
+      select.value = trackMap[track];
+      select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+}
+</script>
 
 <script>
   const toggle = document.getElementById('navToggle');
